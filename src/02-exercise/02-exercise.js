@@ -41,21 +41,23 @@
  */
 
 // Finish the code of the function
-function exercise02() {}
-
-// Don’t change the code bellow this line
-import setup02Exercise from "./02-exercise-setup";
-
-if (process.env.NODE_ENV !== "test") {
-    setup02Exercise(() =>
-        console.log(
-            exercise02({
-                firstName: "John",
-                lastName: "Second",
-            })
-        )
-    );
-    setup02Exercise(() => console.log(exercise02({})));
+function exercise02( {firstName = 'Default firstName', lastName = 'Default lastName'} ) {
+  return `Hello I am ${firstName} ${lastName}`
 }
 
-export default exercise02;
+// Don’t change the code bellow this line
+import setup02Exercise from './02-exercise-setup'
+
+if (process.env.NODE_ENV !== 'test') {
+	setup02Exercise(() =>
+		console.log(
+			exercise02({
+				firstName: 'John',
+				lastName: 'Second',
+			})
+		)
+	)
+	setup02Exercise(() => console.log(exercise02({})))
+}
+
+export default exercise02
