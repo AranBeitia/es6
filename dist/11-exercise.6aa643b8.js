@@ -185,7 +185,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * 3. Returns the result
  */
 // Finish the code of the function
-function exercise11() {} // Don’t change the code bellow this line
+function exercise11(array, entry) {
+  const result = array.find(it => it === entry);
+  return result;
+} // Don’t change the code bellow this line
 
 
 if ("development" !== "test") {
@@ -222,7 +225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57654" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50668" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

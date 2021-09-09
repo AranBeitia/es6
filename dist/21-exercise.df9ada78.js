@@ -211,12 +211,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *    that returns the `jobTitle` of the `Employee`
  */
 // Create the Person class
-class Person {} // Create the Employee class that extends the Person class
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  sayName() {
+    return this.firstName + ' ' + this.lastName;
+  }
+
+} // Create the Employee class that extends the Person class
 
 
 exports.Person = Person;
 
-class Employee {} // Create a new instance of the `Employee` class with the arguments:
+class Employee extends Person {
+  constructor(firstName, lastName, jobTitle) {
+    super(firstName, lastName);
+    this.jobTitle = jobTitle;
+  }
+
+  getJobTitle() {
+    return this.jobTitle;
+  }
+
+} // Create a new instance of the `Employee` class with the arguments:
 //
 // firstName: "Ana"
 // lastName: "Spark"
@@ -226,7 +246,7 @@ class Employee {} // Create a new instance of the `Employee` class with the argu
 
 
 exports.Employee = Employee;
-const ana = ""; // Don’t change the code bellow this line
+const ana = new Employee('Ana', 'Spark', 'Developer'); // Don’t change the code bellow this line
 
 exports.ana = ana;
 
@@ -263,7 +283,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57654" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50668" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

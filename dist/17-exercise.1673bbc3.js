@@ -190,7 +190,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * }
  */
 // Finish the code of the function
-function exercise17() {} // Don’t change the code bellow this line
+function exercise17() {
+  return fetch('https://jsonplaceholder.typicode.com/users/1').then(response => response.json()).then(data => displayContents(data));
+} // Don’t change the code bellow this line
 
 
 function displayContents(data) {
@@ -232,7 +234,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57654" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50668" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

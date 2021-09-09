@@ -16,20 +16,23 @@
  */
 
 // Finish the code of the function
-function exercise12() {}
-
-// Don’t change the code bellow this line
-import setup12Exercise from "./12-exercise-setup";
-
-if (process.env.NODE_ENV !== "test") {
-    setup12Exercise(() =>
-        console.log(
-            exercise12(
-                ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "SOME OTHER DAY"
-            )
-        )
-    );
+function exercise12(array, entry) {
+  const result = array.includes(entry)
+  return result
 }
 
-export default exercise12;
+// Don’t change the code bellow this line
+import setup12Exercise from './12-exercise-setup'
+
+if (process.env.NODE_ENV !== 'test') {
+	setup12Exercise(() =>
+		console.log(
+			exercise12(
+				['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+				'SOME OTHER DAY'
+			)
+		)
+	)
+}
+
+export default exercise12

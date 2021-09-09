@@ -18,23 +18,23 @@
 
 // Finish the code of the function
 function exercise06() {
-    const user = {
-        firstName: "John",
-        lastName: "Marks",
-        age: 33,
-        jobTitle: "Student",
-        company: "Assembler School",
-        averageGrade: 6.6,
-    };
-    const {firstName, lastName, ...rest} = user
-    return rest
+	const user = {
+		firstName: 'John',
+		lastName: 'Marks',
+		age: 33,
+		jobTitle: 'Student',
+		company: 'Assembler School',
+		averageGrade: 6.6,
+	}
+	const { firstName, lastName, ...rest } = user
+	return rest
 }
 
 // Don’t change the code bellow this line
-import setup06Exercise from "./06-exercise-setup";
+import setup06Exercise from './06-exercise-setup'
 
-if (process.env.NODE_ENV !== "test") {
-    setup06Exercise(() => console.log(exercise06()));
+if (process.env.NODE_ENV !== 'test') {
+	setup06Exercise(() => console.log(exercise06()))
 }
 
-export default exercise06;
+export default exercise06

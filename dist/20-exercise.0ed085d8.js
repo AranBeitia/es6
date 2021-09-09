@@ -194,7 +194,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *    "Alex Marks"
  */
 // Create the Person class
-class Person {} // Create a new instance of the class with the arguments:
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  sayName() {
+    return this.firstName + ' ' + this.lastName;
+  }
+
+} // Create a new instance of the class with the arguments:
 //
 // firstName: "Ana"
 // lastName: "Spark"
@@ -203,11 +213,11 @@ class Person {} // Create a new instance of the class with the arguments:
 
 
 exports.Person = Person;
-let ana = ""; // Don’t change the code bellow this line
+let ana = new Person('Ana', 'Spark'); // Don’t change the code bellow this line
 
 exports.ana = ana;
 
-if ("development" !== "test") {
+if ("development" !== 'test') {
   (0, _exerciseSetup.default)(() => console.log(ana));
   (0, _exerciseSetup.default)(() => console.log(ana.sayName()));
 }
@@ -239,7 +249,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57654" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50668" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

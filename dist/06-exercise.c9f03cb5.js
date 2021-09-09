@@ -192,11 +192,11 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 // Finish the code of the function
 function exercise06() {
   const user = {
-    firstName: "John",
-    lastName: "Marks",
+    firstName: 'John',
+    lastName: 'Marks',
     age: 33,
-    jobTitle: "Student",
-    company: "Assembler School",
+    jobTitle: 'Student',
+    company: 'Assembler School',
     averageGrade: 6.6
   };
 
@@ -210,7 +210,7 @@ function exercise06() {
 } // Don’t change the code bellow this line
 
 
-if ("development" !== "test") {
+if ("development" !== 'test') {
   (0, _exerciseSetup.default)(() => console.log(exercise06()));
 }
 
@@ -244,7 +244,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57654" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50668" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
