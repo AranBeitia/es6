@@ -194,7 +194,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * => [3, 4, 5, 6]
  */
 // Finish the code of the function
-const exercise03 = () => {}; // Don’t change the code bellow this line
+const exercise03 = function exercise03(a, b) {
+  for (var _len = arguments.length, rest = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    rest[_key - 2] = arguments[_key];
+  }
+
+  return rest;
+}; // Don’t change the code bellow this line
 
 
 if ("development" !== "test") {
@@ -231,7 +237,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52072" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57654" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

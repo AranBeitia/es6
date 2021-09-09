@@ -168,6 +168,10 @@ var _exerciseSetup = _interopRequireDefault(require("./06-exercise-setup"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 /**
  * Exercise 06:
  *
@@ -195,6 +199,14 @@ function exercise06() {
     company: "Assembler School",
     averageGrade: 6.6
   };
+
+  const {
+    firstName,
+    lastName
+  } = user,
+        rest = _objectWithoutProperties(user, ["firstName", "lastName"]);
+
+  return rest;
 } // Don’t change the code bellow this line
 
 
@@ -232,7 +244,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52072" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57654" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
